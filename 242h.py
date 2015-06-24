@@ -61,7 +61,7 @@ while True:
 	print PREVIOUS_LINE + background + "Moisture level: {:>5} ".format(m) + RESET
 	dt = datetime.datetime.now();
 	next_time = dt + delta;
-    	if m<30:
+    	if m<20:
             if dt > next_water:
             	bashCommand = "sudo pilight-send -p mumbi -s 19 -u 1 -t"
                 os.system(bashCommand)
